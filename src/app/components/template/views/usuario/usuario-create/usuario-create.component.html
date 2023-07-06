@@ -1,0 +1,20 @@
+<form [formGroup]="formularioUsuario" class="form">
+  <h1>CADASTRO DE USUÁRIO</h1>  
+  
+  <mat-form-field class="mat-form">
+    <input matInput formControlName="email" required type="text" name="email" placeholder="E-mail" maxlength="100">
+    <mat-label>E-mail</mat-label>
+    <mat-error *ngIf="formularioUsuario.get('email').invalid">O E-mail deve ser informado!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="mat-form">
+    <input matInput formControlName="senha" required type="password" name="senha" placeholder="Senha" maxlength="20">
+    <mat-label>Senha</mat-label>
+    <mat-error *ngIf="formularioUsuario.get('senha').invalid">A senha deve ser informada!</mat-error>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button [disabled]="formularioUsuario.invalid" (click)="onSubmit()" class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
+    <button class="mat-elevation-z8" routerLink="" mat-stroked-button color="warn">CANCELAR</button>
+  </div>
+</form>

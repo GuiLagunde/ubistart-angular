@@ -1,4 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: rgba(83, 84, 85, 0.151);
+    }
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    background-color: rgb(22, 94, 4);
+    font-size: 1rem;
+    color: white;
+    height: 5%;
+    
+}
+
+
+
+.header {
+    justify-content: center;
+    height: 10%;
+    background-color:rgb(22, 94, 4);
+    ;
+}
+
+.header img {
+    height: 3rem;
+}
+
+.header span {
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    padding-left: 1.2rem;
+    font-size: 1.5rem;
+    
+}

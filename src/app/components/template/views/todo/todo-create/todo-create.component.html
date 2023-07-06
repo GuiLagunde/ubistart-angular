@@ -1,0 +1,21 @@
+<form [formGroup]="formularioTarefa" class="form">
+    <h1>CADASTRO DE TAREFAS</h1>  
+    
+    <mat-form-field class="mat-form">
+      <input matInput formControlName="descricao" required type="text" name="descricao" placeholder="Descrição" >
+      <mat-label>Descrição</mat-label>
+      <mat-error *ngIf="formularioTarefa.get('descricao').invalid">A descrição deve ser informada!</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="mat-form">
+        <input matInput formControlName="prazoEntrega" required type="date" name="prazoEntrega" placeholder="Prazo de Entrega">
+        <mat-label>Prazo de Entrega</mat-label>
+        <mat-error *ngIf="formularioTarefa.get('prazoEntrega').invalid">O prazo de entrega deve ser informado!</mat-error>
+      </mat-form-field>
+      
+  
+    <div class="buttons">
+      <button [disabled]="formularioTarefa.invalid" (click)="onSubmit()" class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
+      <button class="mat-elevation-z8" routerLink="/todo-usuario" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+  </form>

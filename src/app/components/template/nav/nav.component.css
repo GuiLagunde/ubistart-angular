@@ -1,0 +1,28 @@
+.container{
+    height: 85%;
+    background-color: rgb(17, 17, 17);
+}
+
+i{
+    padding-right: 6;
+    background-color: grey;
+}
+
+.side-nav{
+    background-color: rgb(37, 37, 37);
+    
+}
+
+.mat-list{
+    background-color: grey;
+    padding-right: 6;
+}
+
+.sub-menu {
+    margin-left: 20px;
+  }
+  
+  .arrow-icon {
+    margin-left: auto;
+  }
+  

@@ -1,0 +1,47 @@
+<div class="container">
+    <mat-card class="home mat-elevation-z4 list-card">
+      <mat-card-title class="title">
+        Tarefas
+      </mat-card-title>
+      <mat-card-subtitle class="subtitle">Gerenciamento de tarefas</mat-card-subtitle>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    
+      <mat-table [dataSource]="dataSource">
+    
+        <ng-container matColumnDef="descricao">
+          <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{ item.descricao }} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="prazoEntrega">
+          <mat-header-cell *matHeaderCellDef> Prazo </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{ item.prazoEntrega }} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="tarefaStatus">
+          <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{ item.tarefaStatus }} </mat-cell>
+        </ng-container>
+   
+        <ng-container matColumnDef="idTarefa">
+          <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{ item.idTarefa }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="acoes">
+            <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+            <mat-cell *matCellDef="let item">   
+             <a class="edit" routerLink="update/{{item.idTarefa}}">  
+               <i class="material-icons">edit</i>
+             </a>
+            </mat-cell>
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-card>
+    <button class="mat-elevation-z8" routerLink="create" mat-stroked-button color="warn">Cadastrar</button>
+  </div>
+  

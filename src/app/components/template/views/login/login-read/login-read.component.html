@@ -1,0 +1,21 @@
+<form [formGroup]="formularioLogin" class="form">
+  <h1>LOGIN</h1>  
+  
+  <mat-form-field class="mat-form">
+    <input matInput formControlName="email" required type="text" name="email" placeholder="E-mail" maxlength="100">
+    <mat-label>E-mail</mat-label>
+    <mat-error *ngIf="formularioLogin.get('email').invalid">O E-mail deve ser informado!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="mat-form">
+    <input matInput formControlName="senha" required type="password" name="senha" placeholder="Senha" minlength="4">
+    <mat-label>Senha</mat-label>
+    <mat-error *ngIf="formularioLogin.get('senha').invalid">A senha deve ser informada!</mat-error>
+  </mat-form-field>
+  
+  <div class="buttons">
+    <button [disabled]="formularioLogin.invalid" (click)="onSubmit()" class="mat-elevation-z8" mat-stroked-button color="primary">Entrar</button>
+    <button routerLink="/usuario/cadastro" class="mat-elevation-z8" mat-stroked-button color="primary">Cadastrar Usuário</button>
+  </div>  
+</form>
+  

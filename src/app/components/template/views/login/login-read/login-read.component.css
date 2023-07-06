@@ -1,0 +1,41 @@
+.form {
+    background-color: #f1f1f1;
+    margin: 2rem auto 0 auto;
+    width: 30%;
+    align-content: center;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .login {
+    background-color: gray;
+    margin: 2rem auto 0 auto;
+    width: 45%;
+    text-align: center;
+  }  
+  .mat-elevation-z8 {
+    margin: 1rem 2rem 1.5rem 1rem;
+  }
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  label {
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .buttons button {
+    flex-grow: 1;
+  }
+  
+  
+
+  

@@ -1,0 +1,30 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav *ngIf="showMenu" class="side-nav" mode="side" opened>
+      <mat-nav-list>
+        <a mat-list-item class="mat-list">
+          <i routerLink="home" class="material-icons">home</i>
+          Principal
+        </a>
+        <a routerLink="todo-usuario" mat-list-item class="mat-list">
+          <i class="material-icons">list</i>
+          Tarefas
+        </a>
+        <a *ngIf="this.admin" class="mat-list" (click)="toggleSubMenu()">
+          <i class="material-icons">admin_panel_settings</i>
+          Administração
+          <mat-icon class="arrow-icon">{{ showSubMenu ? 'expand_less' : 'expand_more' }}</mat-icon>
+        </a>
+        <div class="sub-menu" *ngIf="showSubMenu">
+            <a routerLink="todo" mat-list-item class="mat-list">
+                <i class="material-icons">list</i>
+                Tarefas
+              </a>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
